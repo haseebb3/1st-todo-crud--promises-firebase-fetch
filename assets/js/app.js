@@ -161,6 +161,7 @@ function onTodoUpdate() {
             return res.json();
         })
         .then(data => {
+            udpatedObj.id = udpateId;
             const udpdateIndex = localState.todoArray.findIndex(todo => todo.id === udpateId);
             localState.todoArray[udpdateIndex] = udpatedObj;
             let udpateLi = document.getElementById(udpateId);
